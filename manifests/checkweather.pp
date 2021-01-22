@@ -30,4 +30,5 @@ cron { "backup-weather":
   command => "/usr/local/bin/backup-weather.sh",
   user    => "root",
   hour    => "22",
+  minute  => "00",
 }
