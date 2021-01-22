@@ -22,6 +22,7 @@ service { "check-weather":
   stop    => "/usr/local/bin/check-weather.sh stop",
   status  => "/usr/local/bin/check-weather.sh status",
   pattern => "check-weather",
+  provider  => base,
 }
 
 cron { "backup-weather":
