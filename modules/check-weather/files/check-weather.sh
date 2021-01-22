@@ -1,5 +1,5 @@
 #!/bin/bash
-# Just check the weather indefinidely
+# Just check the weather indefinitely
 
 CITY="Joao Pessoa"
 FILE=/scripts/weather/weather
