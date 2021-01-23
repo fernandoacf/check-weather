@@ -16,19 +16,19 @@ file { '/usr/local/bin/backup-weather.sh':
   group    => 'root',
 }
 
-service { "check-weather":
-  ensure  => running,
-  start   => "/usr/local/bin/check-weather.sh start",
-  stop    => "/usr/local/bin/check-weather.sh stop",
-  status  => "/usr/local/bin/check-weather.sh status",
-  pattern => "check-weather",
-  provider  => base,
+service { 'check-weather':
+  ensure    => running,
+  provider  => 'base',
+  start     => '/usr/local/bin/check-weather.sh start',
+  stop      => '/usr/local/bin/check-weather.sh stop',
+  status    => '/usr/local/bin/check-weather.sh status',
+  pattern   => 'check-weather',
 }
 
-cron { "backup-weather":
+cron { 'backup-weather':
   ensure  => present,
-  command => "/usr/local/bin/backup-weather.sh",
-  user    => "root",
-  hour    => "22",
-  minute  => "00",
+  command => '/usr/local/bin/backup-weather.sh',
+  user    => 'root',
+  hour    => '22',
+  minute  => '0',
 }
